@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html style="height: 100%; width:100%; margin:0;">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body style="display: flex; height: 100%; width: 100%; margin:0;">
+        <form style="margin: auto; border: solid; padding: 10px;">
+            <label style="font-size: 40px;">Авторизация</label>
+            <br/>
+            <input id="passwordText" type="password" placeholder="Password">
+            <input id="loginButton" type="submit" value="Login">
+        </form>
+        <script>
+
+            function InvalidPassword(){
+                $("#alertText").text("Неверный пароль!");
+            }
+
+            $(document).ready(function(){
+                $("#loginButton").click(function(){
+                    if ($("#passwordText").val() == ''){
+                        $("#alertText").text("Пароль не может быть пустым!");
+                    }
+                    else{
+                        mp.trigger("LoginInfoToClient", $("#passwordText").val());
+                    }
+                })
+            })
+
+        </script>
+    </body>
+</html>

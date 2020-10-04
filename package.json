@@ -1,0 +1,21 @@
+{
+  "name": "jiggaaut-rpg-client",
+  "version": "1.0.0",
+  "description": "JiggaautRPG Client",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/ragemp-c": "https://github.com/CocaColaBear/types-ragemp-c/tarball/master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiggaaut/JiggaautRPGClient.git"
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "set NODE_ENV=development && webpack",
+    "prod": "set NODE_ENV=production && webpack"
+  },
+  "author": "Jiggaaut",
+  "license": "ISC"
+}
